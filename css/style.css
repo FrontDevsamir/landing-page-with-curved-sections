@@ -1,0 +1,659 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+
+*
+,*::before
+,*::after 
+{
+    margin     : 0;
+    padding    : 0;
+    box-sizing : border-box;
+}
+
+
+:root
+{
+    --very-dark-cyan  : hsl(192, 100%, 9%);
+    --very-pale-blue  : hsl(207, 100%, 98%);
+    --pink            : hsl(322, 100%, 66%);
+    --light-pink      : hsl(321, 100%, 78%);
+    --light-red       : hsl(0, 100%, 63%);
+}
+
+
+body,
+html
+{
+    min-height: 100vh;
+}
+
+
+body
+{
+    font-size    : 18px;
+    font-family  : 'Poppins', sans-serif;
+}
+
+
+a
+{
+    text-decoration  : none;
+}
+
+input 
+{
+    outline  : none;
+    border   : none;
+}
+
+
+img
+{
+    display      : block;
+    width        : 100%;
+    height       : 100%;
+    object-fit   : cover;
+}
+
+
+.btn
+{
+    --very-dark-cyan : hsla(192, 50%, 2%, 50%);
+    border           : 2px solid var(--pink);
+    outline          : none;
+    border-radius    : 1em;
+    font-size        : 15px;
+    padding          : .3em 1em;
+    color            : var(--pink);
+    background-color : transparent;
+    display          : inline-block;
+    box-shadow       : 0px .2px 5px 0 var(--very-dark-cyan);
+    transition       : background-color .5s;
+}
+
+
+.btn:hover
+{
+    background-color  : var(--light-pink);
+}
+
+
+/* >> ESTILOS PARA EL HEADER */
+.header
+{
+    width           : 90%;
+    display         : flex;
+    justify-content : space-between;
+    align-items     : center;
+    margin-top      : 2em;
+    margin-bottom   : 8em;
+    margin-left     : auto;
+    margin-right     : auto;
+}
+
+.header__logo
+{
+    width  : 120px;
+}
+
+
+.header__btn
+{
+    transition        : color .5s;
+}
+
+
+.header__btn:hover 
+{
+    color             : var(--light-pink);
+    background-color  : transparent;
+}
+
+
+
+
+/* >> ESTILOS PARA LA PRIMERA SECCION HERO */
+.hero
+{
+    width      : 90%;
+    margin     : auto;
+    text-align : center;
+}
+
+
+.hero__title
+{
+    font-size     : clamp(4px, 8vw, 48px);
+    font-weight   : 700;
+}
+
+
+.hero__paragraph
+{
+    color     : var(--very-dark-cyan);
+    width     : 100%;
+    max-width : 600px;
+    margin    : 1em auto 2em;
+}
+
+
+.hero__btn
+{
+    color            : var(--very-pale-blue);
+    background-color : var(--pink);
+    padding          : .5em 2em;
+    border-radius    : 1.5em;
+    margin-bottom    : 3em;
+    transition       : color .5s;
+}
+
+
+
+
+.hero__img
+{
+    width: 80%;
+    margin: auto;
+}
+
+
+
+
+/* >> ESTILOS PARA LA SECCION DE COMUNIDAD */
+.comunity 
+{
+    width           : 60%;
+    margin          : 5em auto;
+    display         : flex;
+    flex-direction  : column;
+    align-items     : center;
+    gap             : 3em;
+}
+
+.comunity__icon
+{
+    width   : 48px;
+}
+
+
+.comunity > div 
+{
+    width   : 200px;
+}
+
+
+.comunity__number
+{
+    font-size    : 48px;
+    font-weight  : 700;
+}
+
+
+.comunity__paragraph 
+{
+    color      : var(--very-dark-cyan);
+    text-align : center;
+}
+
+
+
+/* <|----------------------------------------------|> */
+.title
+{
+    font-weight   : 700;
+    color         : var(--very-dark-cyan);
+    margin        : 3em 0 .5em;
+}
+/* <|----------------------------------------------|> */
+
+
+
+
+/* >> ESTILOS PARA SECCION DE GROW */
+.grow 
+{
+    width            : 100%;
+    padding          : 0 2em;
+    margin           : 0 0 10em;
+    position         : relative;
+    background-color : #F6FBFF;
+}
+
+
+.grow::before 
+{
+    content            : '';
+    position           : absolute;
+    width              : 100%;
+    height             : 100px;
+    bottom             : 100%;
+    left               : 0;
+    background-image   : url('../images/bg-section-top-mobile-1.svg');
+    background-position: center bottom;
+    background-size    : 100% 100px;
+    background-repeat  : no-repeat;
+}
+
+
+
+
+.grow::after 
+{
+    content           : '';
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    top: 100%;
+    left               : 0;
+    background-image   : url('../images/bg-section-bottom-mobile-1.svg');
+    background-position: center top;
+    background-size    : 100% 100px;
+    background-repeat  : no-repeat;
+}
+
+
+
+.grow__content
+{
+    padding   : 4em 0;
+}
+
+
+.grow__content--info 
+{
+    text-align  : center;
+}
+
+
+.grow--info--paragraph
+{
+    font-size    : 15px;
+}
+
+
+
+
+/* >> ESTILOS PARA SECCION DE FLOOR CONVERSATIONS */
+.flowing 
+{
+    width   : 90%;
+    margin  : 10em auto;
+}
+
+
+.flowing__content
+{
+    padding   : 4em 0;
+}
+
+
+.flowing__content--info 
+{
+    text-align  : center;
+}
+
+
+.flowing--info--paragraph
+{
+    font-size    : 15px;
+}
+
+
+
+/* >> ESTILOS PARA SECCION DE USERS */
+.users 
+{
+    width            : 100%;
+    padding          : 0 2em;
+    margin           : 0 0 10em;
+    position         : relative;
+    background-color : #F6FBFF;
+}
+
+
+.users::before 
+{
+    content            : '';
+    position           : absolute;
+    width              : 100%;
+    height             : 100px;
+    bottom             : 100%;
+    left               : 0;
+    background-image   : url('../images/bg-section-top-mobile-2.svg');
+    background-position: center bottom;
+    background-size    : 100% 100px;
+    background-repeat  : no-repeat;
+}
+
+
+
+
+.users::after 
+{
+    content           : '';
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    top: 100%;
+    left               : 0;
+    background-image   : url('../images/bg-section-bottom-mobile-2.svg');
+    background-position: center top;
+    background-size    : 100% 100px;
+    background-repeat  : no-repeat;
+}
+
+
+
+.users__content
+{
+    padding   : 4em 0;
+}
+
+
+.users__content--info 
+{
+    text-align  : center;
+}
+
+.users--info--paragraph
+{
+    font-size    : 15px;
+}
+
+
+
+/* >> ESTILOS PARA LA SECCION READY */
+.ready 
+{
+    width      : 80%;
+    margin     : 0 auto 3em;
+    text-align : center;
+}
+
+.ready__title 
+{
+    margin-bottom  : 2em;
+}
+
+
+.ready__btn
+{
+    padding-left     : 2em;
+    padding-right    : 2em;
+    background-color : var(--pink);
+    color            : var(--very-pale-blue);
+}
+
+
+
+
+/* >> ESTILOS PARA EL FOOTER (PIE DE PAGINA) */
+.footer 
+{
+    width             : 100%;
+    background-color  : var(--very-dark-cyan);
+    color             : var(--very-pale-blue);
+    padding           : 0 2.5em 2.5em;
+    position          : relative;
+    margin-top        : 10em;
+}
+
+
+.footer::before
+{
+    content            : '';
+    position           : absolute;
+    width              : 100%;
+    height             : 100px;
+    bottom             : 100%;
+    left               : 0;
+    background-image   : url('../images/bg-footer-top-mobile.svg');
+    background-position: center bottom;
+    background-size    : 100% 100px;
+    background-repeat  : no-repeat;
+}
+
+
+.footer__newsletter
+{
+    display        : flex;
+    flex-direction : column;
+    margin-bottom  : 4em;
+}
+
+
+.footer__newsletter--title 
+{
+    color   : inherit;
+}
+
+
+.footer__newsletter--paragraph
+{
+    font-size    : 18px;
+}
+
+
+.footer__newsletter--input 
+{
+    border-radius   : .25em;
+    background-color: var(--very-pale-blue);
+    font-size       : 20px;
+    padding         : .5em;
+    display         : block;
+    margin          : 2em 0 1em;
+    font-family     : inherit;
+    transition      : border .5s, 
+                      box-shadow .5s;
+}
+
+
+.footer__newsletter--input:invalid
+{
+    border     : 1px solid red;
+    box-shadow : inset 0 0 5px rgba(255, 0, 0, 0.618);
+}
+
+
+.footer__newsletter--btn
+{
+    border-radius    : .5em;
+    color            : var(--very-pale-blue);
+    background-color : var(--pink);
+    margin-left      : auto;
+    padding          : .5em 2em;
+}
+
+
+
+.logo__svg 
+{
+    margin   : 2em 0 1em;
+}
+
+
+.text,
+.img 
+{
+    fill  : var(--very-pale-blue);
+}
+
+
+.flex {
+    display  : flex;
+}
+
+
+.icon
+{
+    width         : 20px;
+    margin-right  : 1em;
+}
+
+
+.footer__contact--address
+{
+    display        : flex;
+    flex-direction : column;
+    gap            : 1em;
+    margin         : 2em 0 1em;
+}
+
+
+.footer__contact--address > p
+{
+    align-items    : center;
+    font-style     : normal;
+}
+
+
+.footer__redes 
+{
+    align-items  : center;
+    gap          : 1em;
+    margin-top   : 2em;
+}
+
+.footer__redes > i
+{
+    font-size   : 22px;
+    cursor      : pointer;
+    transition  : color .5s;
+}
+
+
+.footer__redes > i:hover
+{
+    color       : var(--hv);
+}
+
+
+
+
+
+/* >> RESPONSIVE */
+@media screen and (min-width: 728px) 
+{
+
+    .seccion__responsive
+    {
+        display         : flex;
+        flex-direction  : row-reverse;
+        gap             : 4em;
+        justify-content : space-between;
+        align-items     : center;
+        margin-left     : 4em;
+        margin-right    : 4em;
+    }
+
+
+    .info__left
+    {
+        text-align    : left;
+    }
+
+    .comunity
+    {
+        flex-direction  : row;
+        justify-content : space-between;
+    }
+
+
+    .flowing
+    {
+        display        : flex;
+        flex-direction : row;
+    }
+
+
+    .flowing__content--info
+    {
+        text-align     : right;
+    } 
+
+
+
+    
+}
+
+
+
+@media screen and (min-width: 1024px) 
+{
+    .header__logo
+    {
+        width: 200px;
+    }
+
+
+    .btn
+    {
+        font-size  : 24px;
+    }
+
+    .font__title
+    {
+        font-size   : 40px;
+    }    
+
+
+    .font__paragraph
+    {
+        font-size   : 24px;
+    }
+
+
+
+
+    .footer 
+    {
+        display          : flex;
+        flex-direction   : row-reverse;
+        justify-content  : space-between;
+        gap              : 10em;
+        align-items      : flex-start;
+        
+    }
+
+
+    .logo__svg
+    {
+        margin-top   : 0;
+    }
+
+
+
+    .footer__newsletter--title
+    {
+        margin-top   : 0;
+    }
+
+
+    .footer__newsletter--input {
+        flex: 1;
+    }
+
+
+    .input__btn
+    {
+        display     : flex;
+        align-items : center;
+        gap         : 2em;
+        margin-top  : 3em;
+    }
+
+    .input__btn > * {
+        margin     : 0;
+    }
+
+
+    .footer__newsletter--btn 
+    {
+        font-size  : 20px;
+        flex       : .3;
+        display    : block;
+    }
+}
+
+
+
